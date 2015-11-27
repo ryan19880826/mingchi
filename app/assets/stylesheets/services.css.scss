@@ -1,0 +1,64 @@
+// Place all the styles related to the services controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.service_title{
+    color: #57544f;
+    font-size: 20px;	
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.service_title_margin{  
+    margin: 0px 46px 0px 50px;
+}
+.service_title_margin2{  
+    margin: 0px 50px;
+}
+.service_step_detail{
+	font-size: 14px;
+    padding-left: 9px
+}
+.pic_line{
+    width:305px;
+    height:1px;
+    padding:0px;
+    background-color:#626262;
+    overflow:hidden;
+    display:inline-block
+}
+.service_step{
+    text-align: center;
+    margin: 8px 0px 20px 0px;
+    height: 400px;
+    position: relative;
+}
+.arrow{
+    position: absolute;
+    right: -7px;
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .arrow{
+        display: none;   
+    }
+    .service_title{
+        margin-top: 20px;
+    }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+    .arrow{
+        display: none;   
+    }
+    .service_title{
+        margin-top: 20px;
+    }
+    .service_step_detail{
+        margin-left: 10%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1169px) {
+    .custom_container{
+        width: 100%;
+    }
+} 

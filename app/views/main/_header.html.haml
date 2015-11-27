@@ -1,0 +1,17 @@
+%nav.z2.navbar.navbar-default{:role => "navigation"}
+    .container
+        .navbar-header
+            %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+                %span.sr-only Toggle navigation
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar    
+            = link_to image_tag("logo2.png"), root_path, :class => "navbar-brand"
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            %ul.nav.navbar-nav
+                %li= link_to "關於我們", about_us_path
+                %li= link_to "最新消息", "https://www.facebook.com/profile.php?id=100010053691058&fref=ts"
+                %li= link_to "作品集", work_path
+                %li= link_to "服務項目", services_path
+                %li= link_to "問與答", qa_path
+                %li= link_to "聯絡我們", contact_us_path

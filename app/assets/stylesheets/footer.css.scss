@@ -1,0 +1,13 @@
+// Place all the styles related to the about_us controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'global_define';
+.footer_bg{
+    background: rgba(153, 145, 123, 0.9);
+    height: 80px;
+}
+
+.footer_font{
+    padding-top: 7px;
+    color: #FBF9F4;
+}

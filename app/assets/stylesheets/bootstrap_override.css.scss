@@ -1,0 +1,79 @@
+@import 'global_define';
+$grid-gutter-width: 20px !default;
+@import "bootstrap";
+
+body{
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: $main-font-color;
+    font-family: 'Source Sans Pro', sans-serif, "Helvetica Neue",Arial,"Hiragino Sans GB","微軟正黑","Microsoft YaHei",sans-serif !important;
+}
+
+a {
+    color: #57544f;
+}
+
+a:hover{
+    color: #729e9c;
+    text-decoration: none;
+}
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0px;
+    }
+}
+
+.custom_container{
+    @extend .container;
+    width: 80%;
+}
+
+.navbar{
+    min-height: 50px;
+    padding: 5px 0px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.navbar-default{
+    background: rgba(40, 39, 35, 0.8);
+}
+
+.navbar-brand{
+    margin: 0px 30px;
+    padding: 0px;
+}
+
+.nav > li{
+    margin-left: 50px;
+    margin-top: 10px;
+    a {
+        padding: 0px;
+    }
+}
+
+.navbar-default .navbar-nav > li > a{
+    color: #b89f82;
+    font-size: 15px;
+
+    &:hover{
+        color: #b89f82;
+    }
+}
+
+.container > .navbar-collapse{
+    margin-top: 5px;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+    color: #b89f82;
+}    
+
+
+
+
+

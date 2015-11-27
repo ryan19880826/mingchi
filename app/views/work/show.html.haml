@@ -1,0 +1,47 @@
+:ruby
+    first_img = @work.first_photo.photo
+= render partial: "main/header"
+.main_container
+    = image_tag('service_bg.jpg', :class => "main_bg")
+    .row
+        .col-md-12.content_bg
+            .custom_container
+                .work_show_margin
+                    .row
+                        .col-lg-8.col-md-8.col-sm-8
+                            = link_to image_url(first_img), :class => "fancybox", :rel => "gallery1" do
+                                %span.pic_box2{:style => "background-image: url(#{first_img})"}
+                            - @work.work_pics.each do |work_pic|
+                                - if work_pic != @work.work_pics.first
+                                    = link_to image_url(work_pic.photo), :class => "fancybox", :rel => "gallery1" do
+                                        %span.work_show_img2.pic_box3{:style => "background-image: url(#{work_pic.photo})"}  
+                        .col-lg-4.col-md-4.col-sm-4.work_show_right_description.responsive_bottom        
+                            .index_content_title
+                                = @work.title
+                            .work_show_line    
+                            .category
+                                = "分類：#{@work.category.name}"
+                            .footage 
+                                = "坪數：#{@work.footage}坪"
+                            %br
+                            %br    
+                            .description    
+                                = @work.description                 
+                        .col-lg-12.text-left.index_content_title.margin-top-20
+                            其他案例
+                        .work_show_other_case_line
+                        - @other_work.each do |other_work|     
+                            .col-md-4.col-sm-6.padding-0-20  
+                                .index_list_box.margin-20-0
+                                    .pic_box{:style => "background-image: url(#{other_work.first_photo.photo})"}    
+                                    .index_content_title_small
+                                        = "#{other_work.title}"
+                                        %br
+                                        = "#{other_work.address}|#{other_work.footage}坪"
+                                    .hover_block2                                  
+                                        = link_to work_show_path(other_work) do
+                                            %i.fa.fa-hand-pointer-o.fa-3
+                                            %p See More
+    = render partial: "main/footer"
+
+ 

@@ -1,0 +1,22 @@
+= render partial: "main/header"
+.main_container
+    = image_tag('service_bg.jpg', :class => "main_bg")
+    .row
+        .col-md-12.content_bg
+            .custom_container
+                .margin-20-0
+                    .row
+                        .col-md-4.text-left.index_content_title_big.margin-20-0
+                            Questions
+                            .text-left.q_bg.qa_size
+                                - @qas.each do |qa|
+                                    .line_hight
+                                        = link_to qa_show_path(qa) do   
+                                            = qa.id
+                                            ="."
+                                            = qa.question
+                        .col-md-8.text-left.index_content_title_big.margin-20-0
+                            Answer
+                            .text-left.qa_size
+                                = @qas.first.answer
+    = render partial: "main/footer"

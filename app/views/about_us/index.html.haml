@@ -1,0 +1,50 @@
+= render partial: "main/header"
+.main_container
+	= image_tag('about_us_bg.jpg', :class => "main_bg")
+	.row
+		.col-md-12.content_bg.padding-bottom-20
+			.custom_container
+				.margin-20-0
+					.row
+						.col-lg-12.index_content_title.about_us_text_align.margin-20-0
+							.line_left	
+							ABOUT 關於明砌
+							.line_right
+						.col-lg-4	
+						.col-lg-4
+							明砌室內設計顛覆傳統設計師主導大權的刻板印象，結合了設計師的堅持與室內裝修的多年經驗，以人、空間、生活為本，站在客戶角度思考，建構出屋主心中的理想家園。
+						.col-lg-4	
+						.col-lg-12.index_content_title.about_us_text_align.margin-30-0
+							TEAM 團隊介紹
+						.team_introduce
+							%p
+								= image_tag("mouse.jpeg", :class =>"team_introduce_img", :align => "left")
+								.team_introduce_title
+									蕭幸均 / Ryan 設計師
+								.team_introduce_educational_bg		
+									%br
+									· 復興商工 美工科
+									%br
+									· 內政部合格 室內裝修專業設計師
+									%br
+									· 一級 室內裝飾設計師
+									%br
+									%br
+								.team_introduce_description	
+									設計，必須從體會居住者的生活開始。居家規劃回歸居住者的真正需求即使用習慣，規劃出合宜的空間尺度及動線，使其住的舒適自在。材質的選擇與應用，相對也非常重要，因為那是影響空間風格與視覺效果的最重要元素。
+							.team_introduce_line
+						.team_introduce
+							%p
+								= image_tag("mouse.jpeg", :class =>"team_introduce_img", :align => "left")
+								.team_introduce_title
+									蕭幸均 / Ryan 設計師	
+								%br
+								· 復興商工 美工科
+								%br
+								· 內政部合格 室內裝修專業設計師
+								%br
+								· 一級 室內裝飾設計師
+								%br
+								%br
+								設計，必須從體會居住者的生活開始。居家規劃回歸居住者的真正需求即使用習慣，規劃出合宜的空間尺度及動線，使其住的舒適自在。材質的選擇與應用，相對也非常重要，因為那是影響空間風格與視覺效果的最重要元素。
+	= render partial: "main/footer"

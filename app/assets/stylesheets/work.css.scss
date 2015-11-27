@@ -1,0 +1,110 @@
+// Place all the styles related to the work controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.work_show_line{
+    width: 100%;
+    height: 2px;
+    padding: 0px;
+    background-color: #626262;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.work_show_other_case_line{
+    width: 988px;
+    height: 2px;
+    padding: 0px;
+    background-color: #626262;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.work_show_img2{
+    margin: 20px 10px 20px 0px; 
+}
+
+.footage{
+    font-size: 16px;
+}
+
+.description{
+    font-size: 16px;
+}
+
+.page{
+    font-size: 15px;
+}
+
+.category{
+    font-size: 16px;
+    a:focus{
+        color: #729e9c;
+        text-decoration: none;
+    }
+}
+
+.pic_box2{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 400px;    
+    display: inline-block;
+}
+
+.pic_box3{
+    width: 20%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 80px;    
+    display: inline-block;
+}
+.work_show_margin{
+    margin: 20px 0px;
+}
+@media (max-width: 768px) {
+    .pic_box2{
+        height: 200px;    
+    }
+    .pic_box3{
+        height: 40px;    
+    }
+    .work_show_line{
+        display: none;
+    }
+    .col-lg-4.responsive_bottom{
+        margin-bottom: 60px;
+    } 
+}
+@media (min-width: 769px) and (max-width: 991px) {
+    .pic_box{
+        height: 226px;    
+    }
+    .index_list_box .hover_block2{
+        height: 85%;
+    }
+    .main_container{
+        width: 100%;
+    }
+    .custom_container{
+        width: 100%;
+    }
+    .work_show_margin{
+        margin: 35px 10px 30px 10px;
+    }
+    .pic_box2{
+        height: 328px;    
+    }
+    .pic_box3{
+        height: 58px;    
+    }
+    .work_show_right_description{
+        height: 450px;
+    }
+    .work_show_other_case_line{
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,91 @@
+ /* Pure CSS3 Multi Level Drop Down Navigation Menu */
+/*             By www.Bloggermint.com            */
+@import 'global_define';
+@mixin transition-element($element,$second){
+    transition: $element $second;
+    -moz-transition: $element $second; /* Firefox 4 */
+    -webkit-transition: $element $second; /* Safari and Chrome */
+    -o-transition: $element $second; /* Opera */
+}
+.z2{
+    z-index: 2;
+}
+.index_bg{
+    width: 100%;
+    height: 600px;
+    background: image-url("index_bg.jpg") no-repeat center;
+    overflow: hidden;
+    .index_menu{
+        width: 100%;
+        background: rgba(40, 39, 35, 0.8);
+        padding: 10px 0px;
+
+        .index_menu_logo{
+            margin-left:120px;
+            img{
+                opacity:0.4;
+                filter:alpha(opacity=40); /* 针对 IE8 以及更早的版本 */
+            }
+        }
+        .index_menu_wording{
+            margin-left:100px;
+            a {
+                font-size: 15px;
+                color: #b89f82;
+                padding: 20px;
+            }    
+        }    
+    }
+}
+.nav.custom {
+    z-index: 999999;
+    position: static;
+    padding-left: 15px;
+    margin-top: 12px;
+    margin-bottom: 14px;
+    a{
+        font-size: 14px;
+        color: $gray-color;
+    }
+    ul {
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        li {
+            &.top{
+                border-bottom: 5px solid #fff;
+                padding: 10px 0px;
+                @include transition-element(border-bottom, 0.5s);
+                padding-left: 5%;
+                float: right;
+                &:last-child{
+                    padding-left: 0px;
+                }
+            }
+            a {
+                float: right;
+                padding: 12px 15px;
+                text-decoration: none;
+                &.level_1{
+                    padding: 0px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    width: 100%;
+                    text-align: center;
+                    border-bottom: 5px solid #fff;
+                    @include transition-element(all, 0.6s);
+                    &:hover{
+                        border-bottom: 5px solid $gray-color;
+                        @include transition-element(all, 0.6s);
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .nav.custom ul li.top{
+        padding-left: 3%;
+    }
+}

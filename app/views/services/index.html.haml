@@ -1,0 +1,62 @@
+= render partial: "main/header"
+.main_container
+	= image_tag('work_bg.jpg', :class => "main_bg")
+	.row
+		.col-md-12.content_bg
+			.custom_container
+				.margin-20-0
+					.row
+						.col-md-12.text-center.index_content_title.margin-top-20
+							.line_left	
+							Service 服務項目
+							.line_right
+					.row
+						.col-md-4.col-sm-6.index_content_title.service_step	
+							.service_title
+								1.初步諮詢
+								= image_tag("arrow.png", :class =>"arrow")
+							.service_img								
+								= image_tag("service1.jpg")
+							.pic_line
+							%p.text-left.service_step_detail
+								1.電話諮詢
+								%br
+								2.丈量/拍照詳談需求
+								%br
+								3.討論平面配置，風格示意解說
+								%br
+								4.確認平面配置，工程估價擬估
+								%br
+								5.簽訂設計合約		
+						.col-md-4.col-sm-6.index_content_title.service_step
+							.service_title			
+								2.設計階段
+								= image_tag("arrow.png", :class =>"arrow")
+							.service_img	
+								= image_tag("service2.jpg")
+							.pic_line
+							%p.text-left.service_step_detail	
+								1.第一次討論平/立面施工圖、建材
+								%br
+								2.第二次討論平/立面施工圖、確認建材
+								%br
+								3.確認平/立面施工圖，詳列工程估價
+								%br
+								4.簽訂工程合約
+						.col-md-4.col-sm-6.index_content_title.service_step
+							.service_title	
+								3.施工階段
+							.service_img	
+								= image_tag("service3.jpg")
+							.pic_line
+							%p.text-left.service_step_detail	
+								1.開工拜拜，排定工程進度表
+								%br
+								2.挑選窗簾/傢俱
+								%br
+								3.完工驗收、交屋
+								%br
+								4.拍攝完工照片
+								%br
+								5.交付完工手冊及保固書		
+	= render partial: "main/footer"							

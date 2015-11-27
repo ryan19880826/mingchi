@@ -1,0 +1,28 @@
+= render partial: "main/header"
+.main_container
+	= image_tag('index_bg.jpg', :class => "main_bg")
+	.row
+		.col-md-12.content_bg
+			.custom_container
+				.margin-20-0
+					.row
+						.col-md-12.text-center.index_content_title.margin-top-20
+							.line_left
+							%span	
+								最新作品WOKS
+							.line_right
+					.row
+						- @works.each do |work|		
+							.col-md-4.col-sm-6	
+								.index_list_box.margin-20-0.margin-bottom-40
+									= link_to work_show_path(work) do
+										.pic_box{:style => "background-image: url(#{work.first_photo.photo})"}
+										.brief
+											= work.title
+											%br
+											= "#{work.category.name} · #{work.address} · #{work.footage}坪"
+									.hover_block
+										= link_to work_show_path(work) do
+											%i.fa.fa-hand-pointer-o.fa-3
+											%p See More	
+	= render partial: "main/footer" 									

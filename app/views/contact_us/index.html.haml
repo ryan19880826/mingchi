@@ -1,0 +1,37 @@
+= render partial: "main/header"
+.main_container
+    = image_tag('contact_us_bg.jpg', :class => "main_bg")
+    .row
+        .col-md-12.content_bg.padding-bottom-20
+            .custom_container
+                .margin-30-0
+                    .row
+                        .col-md-6.col-sm-6.left_context
+                            .index_content_title_big.margin-top-10
+                                明砌
+                            .index_content_title    
+                                室內設計工作室
+                            .index_content_title_small
+                                把您心中的想法與需求跟我們說吧
+                                %br 歡迎您與我們聯絡！
+                        .col-md-6.col-sm-6.text-left
+                            .margin-top-20
+                                = image_tag('location.jpg')
+                                %span.margin-left-10  新北市土城區清水路 
+                            .margin-top-20
+                                = image_tag('email.jpg')
+                                %span.margin-left-10  nose0821@gmail.com 
+                            .margin-top-20
+                                = image_tag('phone.jpg')
+                                %span.margin-left-10  0925501962
+                            .margin-top-20
+                                %a{:href => "https://www.facebook.com/mc1506"}
+                                    = image_tag('google.jpg')
+                                %span.margin-left-10  
+                                    %a{:href => "https://www.facebook.com/mc1506"} 線上詢問單  
+                            .margin-top-20
+                                %a{:href => "https://www.facebook.com/mc1506"}
+                                    = image_tag('facebook.jpg')
+                                %span.margin-left-10  
+                                    %a{:href => "https://www.facebook.com/mc1506"} FB粉絲團
+    = render partial: "main/footer"       
