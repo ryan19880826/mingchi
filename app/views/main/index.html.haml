@@ -21,8 +21,8 @@
 											= work.title
 											%br
 											= "#{work.category.name} · #{work.address} · #{work.footage}坪"
-									.hover_block
-										= link_to work_show_path(work) do
+									= link_to work_show_path(work) do		
+										.hover_block
 											%i.fa.fa-hand-pointer-o.fa-3
 											%p See More	
 	= render partial: "main/footer" 									

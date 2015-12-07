@@ -12,11 +12,16 @@
 							.line_right
 						.col-md-12.text-center.index_content_title.margin-top-20
 							%span.category
-								= link_to "全部", work_path		
+								= link_to "全部", work_path	
+							%span.divide_line	
+								|	
 							- @categories.each do |category|
 								%span.category	
 									= link_to work_path(:category_id => category.id) do
-										= category.name					
+										= category.name	
+								- if category != @categories.last
+									%span.dsdsdsdsd	
+										|						
 						- @works.each do |work|		
 							.col-md-4.col-sm-6.padding-0-20	
 								.index_list_box.margin-top-20
@@ -26,8 +31,8 @@
 										= "#{work.title}"
 										%br
 										= "#{work.address}|#{work.footage}坪"
-									.hover_block2
-										= link_to work_show_path(work) do
+									= link_to work_show_path(work) do	
+										.hover_block2
 											%i.fa.fa-hand-pointer-o.fa-3
 											%p See More	
 					.row
